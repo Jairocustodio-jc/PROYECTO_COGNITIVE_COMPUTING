@@ -14,9 +14,9 @@ def users_profile():
 def pages_faq():
     return render_template('ayuda/pages-faq.html')
 
-@app.route('/pages-login')
+@app.route('/pages-in')
 def pages_login():
-    return render_template('acceso_pagina/pages-login.html')
+    return render_template('acceso_pagina/pages-in.html')
 
 @app.route('/pages-register')
 def pages_register():
