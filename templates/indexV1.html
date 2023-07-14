@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - SMART NEST Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+<!-- Favicons -->
+<link href="assets/img/favicon.png" rel="icon">
+<link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/quill/quill.snow.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/quill/quill.bubble.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+<link href="{{ url_for('static', filename='vendor/simple-datatables/style.css') }}" rel="stylesheet">
+
+<!-- Template Main CSS File -->
+<link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: May 30 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+<!-- Additional Styles -->
+<style>
+  .center {
+    text-align: center;
+  }
+
+  .justified {
+    text-align: justify;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+  }
+
+  .column {
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  img {
+    width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  p.justified {
+    text-align: justify;
+  }
+
+  .button {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #555;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+  }
+</style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+   <div class="d-flex align-items-center justify-content-between">
+      <a href="{{ url_for('index') }}" class="logo d-flex align-items-center">
+        <img src="{{ url_for('static', filename='img/SMART_NEST.png') }}" alt="">
+          <span class="d-none d-lg-block">SMART NEST</span>
+      </a>
+    </div><!-- End Logo -->
+
+    <div class="left">
+      <a href="/pages-login" class="button">Login</a>
+      <a href="/pages-register" class="button">Register</a>
+      
+    </div>
+
+
+  </header><!-- End Header -->
+
+
+
+  <main id="main" class="main">
+
+    <!-- ############# START TEXT ############# -->
+    <div class="center">
+      <h1>Who we are</h1>
+    </div>
+  
+    <p class="justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum ante tristique bibendum interdum. Mauris id posuere tortor, sed rutrum orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse elementum porta interdum. Aenean leo enim, hendrerit ac tincidunt quis, lobortis euismod ligula. Aliquam vel augue feugiat, egestas augue eget, tristique arcu. Pellentesque et mauris vitae augue blandit venenatis. Sed sed massa vel ligula tincidunt cursus. Fusce sagittis ligula sit amet malesuada cursus. Nulla ac ante justo. Nam eget rhoncus odio. Praesent nec sem vel lacus vulputate varius ut id ante.</p>
+    <p class="justified">Donec congue ipsum ut viverra dignissim. Nullam dictum sem ac nulla pharetra pretium. Vestibulum ac varius neque, eu fringilla nisi. Donec risus mi, faucibus et sodales at, rutrum a neque. Nulla tincidunt commodo leo at posuere. Quisque aliquet mi et mi feugiat interdum. Quisque urna turpis, sollicitudin eu convallis in, ultrices placerat lectus. Sed nisl ipsum, aliquam at diam vitae, interdum placerat nunc. Sed mauris massa, facilisis id suscipit et, sagittis in massa. Maecenas vestibulum dui non volutpat posuere.</p>
+    
+    <div class="container">
+      <div class="column">
+        <img src="{{ url_for('static', filename='img/Objective.png') }}" alt="Description of the image">
+        <p class="justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum ante tristique bibendum interdum. Mauris id posuere tortor, sed rutrum orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse elementum porta interdum. Aenean leo enim, hendrerit ac tincidunt quis, lobortis euismod ligula. Aliquam vel augue feugiat, egestas augue eget, tristique arcu. </p>
+      </div>
+      <div class="column">
+        <img src="{{ url_for('static', filename='img/vision.png') }}" alt="Description of the image">
+        <p class="justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum ante tristique bibendum interdum. Mauris id posuere tortor, sed rutrum orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse elementum porta interdum. Aenean leo enim, hendrerit ac tincidunt quis, lobortis euismod ligula. Aliquam vel augue feugiat, egestas augue eget, tristique arcu. </p>
+      </div>
+      <div class="column">
+        <img src="{{ url_for('static', filename='img/valor.png') }}" alt="Description of the image">
+        <p class="justified">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum ante tristique bibendum interdum. Mauris id posuere tortor, sed rutrum orci. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse elementum porta interdum. Aenean leo enim, hendrerit ac tincidunt quis, lobortis euismod ligula. Aliquam vel augue feugiat, egestas augue eget, tristique arcu. </p>
+      </div>
+    </div>
+
+    
+    <!-- ############# END TEXT ############# -->
+
+    <section class="section dashboard">
+      <div class="row">
+
+        <!-- Right side columns -->
+        <div class="col-lg-4">
+
+        </div><!-- End Right side columns -->
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>SMART NEST</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade & Grupo 3</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="{{ url_for('static', filename='vendor/apexcharts/apexcharts.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/chart.js/chart.umd.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/echarts/echarts.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/quill/quill.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/simple-datatables/simple-datatables.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/tinymce/tinymce.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/php-email-form/validate.js') }}"></script>
+
+<!-- Template Main JS File -->
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>
+
+</html>

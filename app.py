@@ -1,6 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
+# Define your Python list
+tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 24.5, 23, 23, 22, 21, 19, 19, 17]
+
+
 
 @app.route('/')
 def index():
@@ -9,6 +15,21 @@ def index():
 @app.route('/users-profile')
 def users_profile():
     return render_template('usuario/users-profile.html')
+
+#-----------------------------------Experimental-Temperatura----------------------------------
+@app.route('/Tables/Temperatura')
+def table_temp():
+    return render_template('Tables/Temperatura.html', my_list=tempV)
+
+# API endpoint to fetch updated values
+@app.route('/api/get_values')
+def get_values():
+    # Update the list with new values (e.g., my_list.append('New Value'))
+    # Return the updated list as a JSON response
+    return jsonify(my_list)
+#--------------------------------------------------------------------------------
+
+
 
 @app.route('/pages-faq')
 def pages_faq():
