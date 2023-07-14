@@ -1,7 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
+from dao.DAOUsuario import DAOUsuario
 
 app = Flask(__name__)
+
+app.secret_key = "mys3cr3tk3y"
+db = DAOUsuario()
+ruta='/Usuario'
 
 # Define your Python list
 tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 24.5, 23, 23, 22, 21, 19, 19, 17]
