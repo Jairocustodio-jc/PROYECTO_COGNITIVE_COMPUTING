@@ -1,8 +1,7 @@
-create database smartpots;
-use smartpots
+create database smartnest;
+use smartnest
 create table usuario(
     id int primary key auto_increment,
-    perfil blob,
     name varchar(50) not null,
     edad tinyint not null,
     sexo char(1) check (sexo='M'  or sexo='F') not null,
@@ -13,9 +12,16 @@ create table usuario(
     email varchar(50) not null,
     google varchar(50)
 );
+CREATE TABLE usuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(20) NOT NULL
+);
+
 
 insert into usuario values(
-    (imagen),
     'Javier Gutierrez Alvarado',
     23,
     M,
@@ -28,7 +34,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Alexis Blanco Perez',
     45,
     M,
@@ -41,7 +46,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Elena Maria Cordon',
     37,
     F,
@@ -54,7 +58,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Jose-Andres Hinojosa Wu',
     18,
     M,
@@ -67,7 +70,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Raimundo Mira Elizabeth',
     18,
     M,
@@ -80,7 +82,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Amaia Jara',
     18,
     M,
@@ -93,7 +94,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Neus Minguez',
     18,
     M,
@@ -106,7 +106,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'John Cañizares',
     18,
     M,
@@ -119,7 +118,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Rayan Roldan',
     18,
     M,
@@ -132,7 +130,6 @@ insert into usuario values(
 );
 
 insert into usuario values(
-    (imagen),
     'Milagros Nevado',
     18,
     M,

@@ -1,7 +1,12 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
+from dao.DAOUsuario import DAOUsuario
 
 app = Flask(__name__)
+
+app.secret_key = "mys3cr3tk3y"
+db = DAOUsuario()
+ruta='/Usuario'
 
 # Define your Python list
 tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 24.5, 23, 23, 22, 21, 19, 19, 17]
@@ -41,6 +46,25 @@ def get_values():
 @app.route('/pages-faq')
 def pages_faq():
     return render_template('ayuda/pages-faq.html')
+
+@app.route('/pages-in')
+def pages_login():
+    return render_template('acceso_pagina/pages-in.html')
+
+#-----------------------------------Experimental-Register----------------------------------
+@app.route(ruta+'/pages-register', methods = ['POST', 'GET'])
+def pages_register():
+    if request.method == 'POST' and request.form['save']:
+        if db.insert(request.form):
+            flash("Registro satistactorio!!!")
+        else:
+            flash("ERROR, al registrarse")
+        #return redirect(url_for('index'))
+        return render_template('acceso_pagina/pages-register.html')
+    else:
+        #return redirect(url_for('index'))
+        return render_template('acceso_pagina/pages-register.html')  
+#--------------------------------------------------------------------------------
 
 @app.route('/pages-error-404')
 def pages_error_404():
