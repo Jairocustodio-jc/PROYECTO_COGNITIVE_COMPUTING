@@ -44,9 +44,20 @@ def pages_faq():
 def pages_login():
     return render_template('acceso_pagina/pages-in.html')
 
-@app.route('/pages-register')
+#-----------------------------------Experimental-Register----------------------------------
+@app.route(ruta+'/pages-register', methods = ['POST', 'GET'])
 def pages_register():
-    return render_template('acceso_pagina/pages-register.html')
+    if request.method == 'POST' and request.form['save']:
+        if db.insert(request.form):
+            flash("Registro satistactorio!!!")
+        else:
+            flash("ERROR, al registrarse")
+        #return redirect(url_for('index'))
+        return render_template('acceso_pagina/pages-register.html')
+    else:
+        #return redirect(url_for('index'))
+        return render_template('acceso_pagina/pages-register.html')  
+#--------------------------------------------------------------------------------
 
 @app.route('/pages-error-404')
 def pages_error_404():
