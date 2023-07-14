@@ -10,7 +10,14 @@ tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 2
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+@app.route('/acceso_pagina')
+def pages_login():
     return render_template('acceso_pagina/pages-in.html')
+
+@app.route('/pages-register')
+def pages_register():
+    return render_template('acceso_pagina/pages-register.html')
 
 @app.route('/users-profile')
 def users_profile():
@@ -34,14 +41,6 @@ def get_values():
 @app.route('/pages-faq')
 def pages_faq():
     return render_template('ayuda/pages-faq.html')
-
-@app.route('/pages-in')
-def pages_login():
-    return render_template('acceso_pagina/pages-in.html')
-
-@app.route('/pages-register')
-def pages_register():
-    return render_template('acceso_pagina/pages-register.html')
 
 @app.route('/pages-error-404')
 def pages_error_404():
