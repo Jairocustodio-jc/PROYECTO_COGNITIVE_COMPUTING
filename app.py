@@ -73,7 +73,7 @@ def pages_register():
         else:
             flash("ERROR, al registrarse")
         #return redirect(url_for('index'))
-        return render_template('acceso_pagina/pages-register.html')
+        return render_template('usuario/users-profile.html')
     else:
         #return redirect(url_for('index'))
         return render_template('acceso_pagina/pages-register.html')  

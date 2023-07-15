@@ -64,7 +64,7 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" method="POST" action="/pages-register">
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -102,7 +102,8 @@
 
                     <!-- referencia de dirreccion    -->
                     <div class="col-12">
-                      <a href="/users-profile" class="btn btn-primary w-100">Create Account</a>
+                      <!--<a href="/users-profile" class="btn btn-primary w-100">Create Account</a>-->
+                      <input name="save" type="submit" class="btn btn-primary w-100" value="Create Account">
                     </div>
                     
                     <div class="col-12">
