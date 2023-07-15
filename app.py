@@ -42,7 +42,8 @@ def users_profile():
 #-----------------------------------Experimental-Temperatura----------------------------------
 @app.route('/Tables/Temperatura')
 def table_temp():
-    return render_template('Tables/Temperatura.html', my_list_temp=tempV)
+    tempV_latest_24 = tempV[-24:]  # Get the latest 24 elements of the list
+    return render_template('Tables/Temperatura.html', my_list_temp=tempV_latest_24)
 
 # API endpoint to fetch updated values
 @app.route('/api/get_values')
@@ -54,19 +55,22 @@ def get_values():
 #-----------------------------------Experimental-Lluvia----------------------------------
 @app.route('/Tables/Lluvia')
 def table_rain():
-    return render_template('Tables/Lluvia.html', my_list_lluvia=lluvV)
+    lluvV_latest_24 = tempV[-24:]  # Get the latest 24 elements of the list
+    return render_template('Tables/Lluvia.html', my_list_lluvia=lluvV_latest_24)
 
 #--------------------------------------------------------------------------------
 #-----------------------------------Experimental-Humedad----------------------------------
 @app.route('/Tables/Humedad')
 def table_hum():
-    return render_template('Tables/Humedad.html', my_list_hume=humeV)
+    humeV_latest_24 = tempV[-24:]  # Get the latest 24 elements of the list
+    return render_template('Tables/Humedad.html', my_list_hume=humeV_latest_24)
 
 #--------------------------------------------------------------------------------
 #-----------------------------------Experimental-Aire----------------------------------
 @app.route('/Tables/Aire')
 def table_air():
-    return render_template('Tables/Aire.html', my_list_aire=aireV)
+    aireV_latest_24 = tempV[-24:]  # Get the latest 24 elements of the list
+    return render_template('Tables/Aire.html', my_list_aire=aireV_latest_24)
 
 #--------------------------------------------------------------------------------
 
