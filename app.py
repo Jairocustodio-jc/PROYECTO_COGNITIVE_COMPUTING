@@ -47,7 +47,7 @@ def get_values():
 def pages_faq():
     return render_template('ayuda/pages-faq.html')
 
-@app.route('/pages-in')
+@app.route(ruta+'/pages-in')
 def pages_login():
     return render_template('acceso_pagina/pages-in.html')
 
