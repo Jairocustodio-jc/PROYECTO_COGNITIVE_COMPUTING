@@ -39,6 +39,24 @@ def get_values():
     # Return the updated list as a JSON response
     return jsonify(my_list)
 #--------------------------------------------------------------------------------
+#-----------------------------------Experimental-Lluvia----------------------------------
+@app.route('/Tables/Lluvia')
+def table_rain():
+    return render_template('Tables/Lluvia.html', my_list=tempV)
+
+#--------------------------------------------------------------------------------
+#-----------------------------------Experimental-Humedad----------------------------------
+@app.route('/Tables/Humedad')
+def table_hum():
+    return render_template('Tables/Temperatura.html', my_list=tempV)
+
+#--------------------------------------------------------------------------------
+#-----------------------------------Experimental-Aire----------------------------------
+@app.route('/Tables/Aire')
+def table_air():
+    return render_template('Tables/Temperatura.html', my_list=tempV)
+
+#--------------------------------------------------------------------------------
 
 
 @app.route('/pages-faq')
