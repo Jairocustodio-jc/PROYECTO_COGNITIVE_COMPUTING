@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
 from dao.DAOUsuario import DAOUsuario
+#import mysql.connector
 
 app = Flask(__name__)
 
@@ -14,13 +15,27 @@ lluvV = [19, 25, 32, 25, 17, 8, 18.5, 18.7, 18.4, 19, 20.5, 21.4, 23, 25, 24, 25
 aireV = [1,2,3,5,6,1,2,8,7,6,4,3,2,1,5,6,8,9,7,8,1,0,2,5]
 
 
-
 @app.route('/')
 def index():
     return render_template('index_oficial.html')
 @app.route('/acceso_pagina')
 def pages_login():
     return render_template('acceso_pagina/pages-in.html')
+
+#@app.route('/pages-in', methods=['POST', 'GET'])
+#def pages_in():
+#    if request.method == 'POST':
+#        email = request.form.get('email')
+#        password = request.form.get('password')
+
+#        if db.check_user_credentials(email, password):
+            # User exists and credentials are valid
+#            return "Login successful"
+#        else:
+            # Invalid email or password
+#            return "Invalid email or password"
+
+#    return render_template('acceso_pagina/pages-in.html')
 
 #@app.route('/pages-register')
 #def pages_register():
