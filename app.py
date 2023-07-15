@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 app.secret_key = "mys3cr3tk3y"
 db = DAOUsuario()
-ruta='/Usuario'
 
 # Define your Python list
 tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 24.5, 23, 23, 22, 21, 19, 19, 17]
@@ -20,9 +19,9 @@ def index():
 def pages_login():
     return render_template('acceso_pagina/pages-in.html')
 
-@app.route('/pages-register')
-def pages_register():
-    return render_template('acceso_pagina/pages-register.html')
+#@app.route('/pages-register')
+#def pages_register():
+#    return render_template('acceso_pagina/pages-register.html')
 
 @app.route('/users-profile')
 def users_profile():
@@ -42,17 +41,13 @@ def get_values():
 #--------------------------------------------------------------------------------
 
 
-
 @app.route('/pages-faq')
 def pages_faq():
     return render_template('ayuda/pages-faq.html')
 
-@app.route(ruta+'/pages-in')
-def pages_login():
-    return render_template('acceso_pagina/pages-in.html')
 
 #-----------------------------------Experimental-Register----------------------------------
-@app.route(ruta+'/pages-register', methods = ['POST', 'GET'])
+@app.route('/pages-register', methods = ['POST', 'GET'])
 def pages_register():
     if request.method == 'POST' and request.form['save']:
         if db.insert(request.form):
