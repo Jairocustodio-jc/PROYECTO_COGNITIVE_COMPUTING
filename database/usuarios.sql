@@ -1,5 +1,70 @@
 create database smartnest;
 use smartnest
+
+CREATE TABLE usuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(20) NOT NULL
+);
+
+CREATE TABLE usuario (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    username VARCHAR(50) NOT NULL,
+    password VARCHAR(20) NOT NULL,
+    company VARCHAR(50),
+    job VARCHAR(15),
+    country VARCHAR(15),
+    address VARCHAR(50),
+    phone VARCHAR(15),
+    about VARCHAR(150),
+    twitter VARCHAR(50),
+    fb VARCHAR(50),
+    insta VARCHAR(50),
+    linkedin VARCHAR(50)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------
 create table usuario(
     id int primary key auto_increment,
     name varchar(50) not null,
@@ -12,15 +77,6 @@ create table usuario(
     email varchar(50) not null,
     google varchar(50)
 );
-CREATE TABLE usuario (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(50) NOT NULL,
-    username VARCHAR(50) NOT NULL,
-    password VARCHAR(20) NOT NULL
-);
-
-
 insert into usuario values(
     'Javier Gutierrez Alvarado',
     23,
@@ -32,7 +88,6 @@ insert into usuario values(
     'JGAlvarado@gmail.com',
     ...
 );
-
 insert into usuario values(
     'Alexis Blanco Perez',
     45,

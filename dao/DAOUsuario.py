@@ -4,20 +4,20 @@ class DAOUsuario:
     def connect(self):
         return pymysql.connect(host="localhost",user="root",password="",db="smartnest" )
 
-#    def read(self, id):
-#        con = DAOUsuario.connect(self)
-#        cursor = con.cursor()
+    def read(self, id):
+        con = DAOUsuario.connect(self)
+        cursor = con.cursor()
 
-#        try:
-#            if id == None:
-#                cursor.execute("SELECT * FROM curso order by nombre asc")
-#            else:
-#                cursor.execute("SELECT * FROM curso where id = %s order by nombre asc", (id,))
-#            return cursor.fetchall()
-#        except:
-#            return ()
-#        finally:
-#            con.close()
+        try:
+            if id == None:
+                cursor.execute("SELECT * FROM usuario order by nombre asc")
+            else:
+                cursor.execute("SELECT * FROM usuario where id = %s order by nombre asc", (id,))
+            return cursor.fetchall()
+        except:
+            return ()
+        finally:
+            con.close()
 
     def insert(self,data):
         con = DAOUsuario.connect(self)
