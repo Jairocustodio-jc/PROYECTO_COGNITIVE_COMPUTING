@@ -15,7 +15,7 @@ tempV = [15, 15, 16, 16, 17, 18, 18.5, 18.7, 18.4, 19, 20, 21, 23, 25, 24, 25, 2
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index_oficial.html')
 @app.route('/acceso_pagina')
 def pages_login():
     return render_template('acceso_pagina/pages-in.html')
